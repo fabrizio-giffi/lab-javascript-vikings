@@ -73,7 +73,7 @@ class War {
 
         const battle = randomSax.receiveDamage(randomVik.strength)
         if (randomSax.health <= 0) {
-            this.saxonArmy.splice(this.saxonArmy.indexOf(randomSax))
+            this.saxonArmy.splice(this.saxonArmy.indexOf(randomSax), 1)
         }
         return battle
     }
@@ -84,7 +84,7 @@ class War {
 
         const battle = randomVik.receiveDamage(randomSax.strength)
         if (randomVik.health <= 0) {
-            this.vikingArmy.splice(this.vikingArmy.indexOf(randomVik))
+            this.vikingArmy.splice(this.vikingArmy.indexOf(randomVik), 1)
         }
         return battle
     }
@@ -113,13 +113,13 @@ class War {
 //     if (attacker.includes(viking)) {
 //         battle = saxon.receiveDamage(viking.strength)
 //         if (saxon.health <= 0) {
-//         this.saxonArmy.splice(this.saxonArmy.indexOf(saxon))
+//         this.saxonArmy.splice(this.saxonArmy.indexOf(saxon), 1)
 //         }
 //     }
 //     else {
 //         battle = viking.receiveDamage(saxon.strength)
 //         if (viking.health <= 0) {
-//         this.vikingArmy.splice(this.vikingArmy.indexOf(viking))
+//         this.vikingArmy.splice(this.vikingArmy.indexOf(viking), 1)
 //         }
 //     }
 //     return battle
